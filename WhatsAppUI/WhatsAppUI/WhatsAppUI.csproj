@@ -24,7 +24,6 @@
     <Folder Include="Converters\" />
     <Folder Include="Controls\" />
     <Folder Include="PopupPages\" />
-    <Folder Include="Services\Dialog\" />
     <Folder Include="Services\Navigation\" />
     <Folder Include="ViewModels\Base\" />
   </ItemGroup>
