@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using WhatsApp.Helpers;
-//using WhatsApp.Services.Navigation;
+using WhatsApp.Services.Dialog;
+using WhatsApp.Services.Navigation;
 //using WhatsApp.ViewModels.Base;
 
 namespace WhatsApp.ViewModels
@@ -8,8 +9,8 @@ namespace WhatsApp.ViewModels
     public class BaseViewModel : ObservableObject
     {
         
-       // protected readonly IDialogService DialogService;
-       // protected readonly INavigationService NavigationService;
+        protected readonly IDialogService DialogService;
+        protected readonly INavigationService NavigationService;
 
         public BaseViewModel()
         {
