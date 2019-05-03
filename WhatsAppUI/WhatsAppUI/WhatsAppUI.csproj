@@ -24,9 +24,14 @@
     <Folder Include="Converters\" />
     <Folder Include="Controls\" />
     <Folder Include="PopupPages\" />
-    <Folder Include="Services\Navigation\" />
     <Folder Include="Services\Dialog\" />
+    <Folder Include="Services\Navigation\" />
     <Folder Include="ViewModels\Base\" />
-    <Folder Include="Views\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\CustomNavigationView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
