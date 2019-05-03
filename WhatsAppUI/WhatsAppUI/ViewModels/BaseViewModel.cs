@@ -2,7 +2,7 @@
 using WhatsApp.Helpers;
 using WhatsApp.Services.Dialog;
 using WhatsApp.Services.Navigation;
-//using WhatsApp.ViewModels.Base;
+using WhatsApp.ViewModels.Base;
 
 namespace WhatsApp.ViewModels
 {
@@ -15,8 +15,8 @@ namespace WhatsApp.ViewModels
         public BaseViewModel()
         {
 
-            //DialogService = ViewModelLocator.Resolve<IDialogService>();
-            //NavigationService = ViewModelLocator.Resolve<INavigationService>();
+            DialogService = ViewModelLocator.Resolve<IDialogService>();
+            NavigationService = ViewModelLocator.Resolve<INavigationService>();
            
         }
 
