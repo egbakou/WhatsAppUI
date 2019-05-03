@@ -1,4 +1,7 @@
-﻿using System;
+﻿using System.Threading.Tasks;
+using WhatsApp.Services.Navigation;
+using WhatsApp.ViewModels.Base;
+using WhatsApp.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,12 +14,32 @@ namespace WhatsAppUI
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            InitApp();
+
+            if (Device.RuntimePlatform == Device.UWP)
+            {
+                InitNavigation();
+            }
+
+            MainPage = new NavigationPage(new MainView());
+        }
+
+
+
+        private Task InitNavigation()
+        {
+            var navigationService = ViewModelLocator.Resolve<INavigationService>();
+            return navigationService.InitializeAsync();
+        }
+
+        private void InitApp()
+        {
+            ViewModelLocator.RegisterDependencies(false);
         }
 
         protected override void OnStart()
         {
-            // Handle when your app starts
+            base.OnStart();
         }
 
         protected override void OnSleep()
@@ -28,5 +51,6 @@ namespace WhatsAppUI
         {
             // Handle when your app resumes
         }
+
     }
 }
