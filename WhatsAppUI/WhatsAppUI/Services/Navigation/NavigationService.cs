@@ -24,8 +24,7 @@ namespace CISPointOfSale.Services.Navigation
 
         public Task InitializeAsync()
         {
-            return null;
-            //return NavigateToAsync<MainViewModel>();
+            return NavigateToAsync<MainViewModel>();
 
         }
 

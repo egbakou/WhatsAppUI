@@ -33,7 +33,7 @@ namespace WhatsApp.ViewModels.Base
             var builder = new ContainerBuilder();
 
             // View models            
-            //builder.RegisterType<MainViewModel>();
+            builder.RegisterType<MainViewModel>();
 
             // Services
             builder.RegisterType<NavigationService>().As<INavigationService>().SingleInstance();
