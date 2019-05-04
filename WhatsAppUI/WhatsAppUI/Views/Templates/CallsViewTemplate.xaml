@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="WhatsApp.Views.Templates.CallsViewTemplate"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:ffTransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations">
+    <ContentView.Content>
+        <Frame
+            HasShadow="True"
+            HeightRequest="45"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Fill">
+            <StackLayout
+                Margin="0,0,0,0"
+                Padding="0,0,0,0"
+                Orientation="Horizontal"
+                VerticalOptions="Center">
+                <!--  last status image  -->
+                <StackLayout
+                    HorizontalOptions="Center"
+                    Orientation="Vertical"
+                    VerticalOptions="Center">
+                    <ff:CachedImage
+                        Margin="0,0,0,5"
+                        HeightRequest="55"
+                        HorizontalOptions="StartAndExpand"
+                        Source="{Binding Contact.ProfileImage}"
+                        VerticalOptions="Center"
+                        WidthRequest="55">
+                        <ff:CachedImage.Transformations>
+                            <ffTransformations:RoundedTransformation Radius="240" />
+                        </ff:CachedImage.Transformations>
+                        <ff:CachedImage.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped" />
+                        </ff:CachedImage.GestureRecognizers>
+                    </ff:CachedImage>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="FillAndExpand">
+                    <StackLayout
+                        Margin="0,0,0,0"
+                        HorizontalOptions="FillAndExpand"
+                        Orientation="Horizontal"
+                        VerticalOptions="Center">
+                        <StackLayout
+                            Margin="0,0,5,0"
+                            HorizontalOptions="Start"
+                            Orientation="Vertical"
+                            VerticalOptions="Center">
+                            <Label
+                                FontSize="17"
+                                HorizontalOptions="Start"
+                                Text="{Binding Contact.Name}"
+                                TextColor="#000000"
+                                XAlign="Start" />
+                            <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand">
+                                <Image
+                                    HeightRequest="15"
+                                    HorizontalOptions="Start"
+                                    IsVisible="{Binding IsMissedCall}"
+                                    Source="missecall.png" />
+                                <Image
+                                    HeightRequest="15"
+                                    HorizontalOptions="Start"
+                                    IsVisible="{Binding OutCall}"
+                                    Source="outcall.png" />
+                                <Label
+                                    FontSize="14"
+                                    Text="{Binding CallDate}"
+                                    TextColor="Gray" />
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout
+                            HorizontalOptions="EndAndExpand"
+                            Orientation="Horizontal"
+                            VerticalOptions="Center">
+                            <Image
+                                HeightRequest="30"
+                                Source="voicecall.png"
+                                WidthRequest="25" />
+                        </StackLayout>
+                    </StackLayout>
+                    <BoxView
+                        HeightRequest="0.3"
+                        HorizontalOptions="FillAndExpand"
+                        Color="LightGray" />
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </ContentView.Content>
+</ContentView>

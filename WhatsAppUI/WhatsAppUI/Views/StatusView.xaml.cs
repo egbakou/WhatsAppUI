@@ -1,12 +1,11 @@
-﻿using WhatsApp.Controls;
-using WhatsApp.Models;
+﻿using WhatsApp.Models;
 using WhatsApp.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace WhatsApp.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class StatusView  : ContentPage
 	{
         private StatusViewModel viewModel;
