@@ -1,4 +1,8 @@
-﻿using WhatsApp.Models;
+﻿using FFImageLoading.Forms;
+using Rg.Plugins.Popup.Extensions;
+using System;
+using WhatsApp.Models;
+using WhatsApp.PopupPages;
 using WhatsApp.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -23,6 +27,13 @@ namespace WhatsApp.Views
                 Navigation.PushModalAsync(new StatusDetailView(item));
             }
         }
-       
+
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            var imageSender = (CachedImage)sender;
+            await Navigation.PushPopupAsync(new ChatProfileSelectionPopupView(imageSender.Source));
+
+        }
+
     }
 }

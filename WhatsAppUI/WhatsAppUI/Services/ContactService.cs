@@ -8,10 +8,10 @@ namespace WhatsApp.Services
         public static List<Contact> GetAllContact()
         {
             List<Contact> contacts = new List<Contact>
-            {
+            {              
                 new Contact
                 {
-                    ContactID = 1,
+                    ContactID = 3,
                     Name = "Flora",
                     PhoneNumber = "+228999999",
                     ProfileImage = "Flora.jpg",
@@ -25,7 +25,7 @@ namespace WhatsApp.Services
                 },
                 new Contact
                 {
-                    ContactID = 2,
+                    ContactID = 4,
                     Name = "Rita",
                     PhoneNumber = "+228999999",
                     ProfileImage = "Rita.jpg",
@@ -39,7 +39,7 @@ namespace WhatsApp.Services
                 },
                 new Contact
                 {
-                    ContactID = 3,
+                    ContactID = 5,
                     Name = "Sara",
                     PhoneNumber = "+228999999",
                     ProfileImage = "Sara.jpg",
@@ -51,13 +51,27 @@ namespace WhatsApp.Services
                         MessageContent = new Emoji(0x2764).ToString()
                     }
                 },
+                 new Contact
+                {
+                    ContactID = 1,
+                    Name = ".Net developers",
+                    PhoneNumber = "+228999999",
+                    ProfileImage = "dotnet.jpg",
+                    ChatPinned = false,
+                    ChatMetaData = new LastChatMetaData{
+                        LastChatMetaDataID = 1,
+                        LastChatDatetime = "13:09",
+                        MessageIsFromMe = true,
+                        MessageContent = ".Net core 3 preview"
+                    }
+                },               
                 new Contact
                 {
-                    ContactID = 4,
+                    ContactID = 6,
                     Name = "Riana",
                     PhoneNumber = "+228999999",
                     ProfileImage = "Riana.jpg",
-                    ChatPinned = true,
+                    ChatPinned = false,
                     ChatMetaData = new LastChatMetaData{
                         LastChatMetaDataID = 4,
                         LastChatDatetime = "12:12",
@@ -67,7 +81,7 @@ namespace WhatsApp.Services
                 },
                 new Contact
                 {
-                    ContactID = 5,
+                    ContactID = 7,
                     Name = "Grace",
                     PhoneNumber = "+228999999",
                     ProfileImage = "Grace.jpg",
@@ -81,7 +95,7 @@ namespace WhatsApp.Services
                 },
                 new Contact
                 {
-                    ContactID = 6,
+                    ContactID = 8,
                     Name = "Alice",
                     PhoneNumber = "+228999999",
                     ProfileImage = "Alice.jpg",
@@ -95,7 +109,7 @@ namespace WhatsApp.Services
                 },
                 new Contact
                 {
-                    ContactID = 7,
+                    ContactID = 9,
                     Name = "Valerie",
                     PhoneNumber = "+228999999",
                     ProfileImage = "Valerie.jpg",
@@ -109,7 +123,7 @@ namespace WhatsApp.Services
                 },
                 new Contact
                 {
-                    ContactID = 8,
+                    ContactID = 10,
                     Name = "Sandrine",
                     PhoneNumber = "+228999999",
                     ProfileImage = "Sandrine.jpg",
@@ -123,7 +137,7 @@ namespace WhatsApp.Services
                 },
                 new Contact
                 {
-                    ContactID = 9,
+                    ContactID = 11,
                     Name = "Centia",
                     PhoneNumber = "+228999999",
                     ProfileImage = "Centia.jpg",
@@ -137,7 +151,7 @@ namespace WhatsApp.Services
                 },
                 new Contact
                 {
-                    ContactID = 10,
+                    ContactID = 12,
                     Name = "Natalie",
                     PhoneNumber = "+228999999",
                     ProfileImage = "Natalie.jpg",
@@ -149,6 +163,20 @@ namespace WhatsApp.Services
                         MessageContent = "Hello, how are you today ?"
                     }
                 },
+                 new Contact
+                {
+                    ContactID = 2,
+                    Name = "Nasa team",
+                    PhoneNumber = "+228999999",
+                    ProfileImage = "nasa.jpg",
+                    ChatPinned = false,
+                    ChatMetaData = new LastChatMetaData{
+                        LastChatMetaDataID = 1,
+                        LastChatDatetime = "Yesterday",
+                        MessageIsFromMe = true,
+                        MessageContent = "Dragon's solar arrays ..."
+                    }
+                }
             };
 
             return contacts;

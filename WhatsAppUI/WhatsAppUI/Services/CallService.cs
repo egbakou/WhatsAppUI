@@ -18,7 +18,7 @@ namespace WhatsApp.Services
                     IsMissedCall = false,
                     Contact = new Contact
                     {
-                        ContactID = 10,
+                        ContactID = 12,
                         Name = "Natalie",
                         PhoneNumber = "+228999999",
                         ProfileImage = "Natalie.jpg"
@@ -33,7 +33,7 @@ namespace WhatsApp.Services
                     IsMissedCall = true,
                     Contact = new Contact
                     {
-                        ContactID = 9,
+                        ContactID = 11,
                         Name = "Centia",
                         PhoneNumber = "+228999999",
                         ProfileImage = "Centia.jpg"
@@ -48,7 +48,7 @@ namespace WhatsApp.Services
                     IsMissedCall = true,
                     Contact = new Contact
                     {
-                        ContactID = 8,
+                        ContactID = 10,
                         Name = "Sandrine",
                         PhoneNumber = "+228999999",
                         ProfileImage = "Sandrine.jpg"
@@ -63,7 +63,7 @@ namespace WhatsApp.Services
                     IsMissedCall = false,
                     Contact = new Contact
                     {
-                        ContactID = 7,
+                        ContactID = 9,
                         Name = "Valerie",
                         PhoneNumber = "+228999999",
                         ProfileImage = "Valerie.jpg"
@@ -78,7 +78,7 @@ namespace WhatsApp.Services
                     IsMissedCall = true,
                     Contact = new Contact
                     {
-                        ContactID = 7,
+                        ContactID = 9,
                         Name = "Valerie",
                         PhoneNumber = "+228999999",
                         ProfileImage = "Valerie.jpg"
@@ -93,7 +93,7 @@ namespace WhatsApp.Services
                     IsMissedCall = false,
                     Contact = new Contact
                     {
-                        ContactID = 6,
+                        ContactID = 8,
                         Name = "Alice",
                         PhoneNumber = "+228999999",
                         ProfileImage = "Alice.jpg"
@@ -108,7 +108,7 @@ namespace WhatsApp.Services
                     IsMissedCall = false,
                     Contact = new Contact
                     {
-                        ContactID = 5,
+                        ContactID = 7,
                         Name = "Grace",
                         PhoneNumber = "+228999999",
                         ProfileImage = "Grace.jpg"
@@ -123,7 +123,7 @@ namespace WhatsApp.Services
                     IsMissedCall = false,
                     Contact = new Contact
                     {
-                        ContactID = 4,
+                        ContactID = 6,
                         Name = "Riana",
                         PhoneNumber = "+228999999",
                         ProfileImage = "Riana.jpg"

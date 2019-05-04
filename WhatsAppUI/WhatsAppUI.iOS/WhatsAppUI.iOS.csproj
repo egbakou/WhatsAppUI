@@ -315,4 +315,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\windows.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\hmo.jpg" />
+  </ItemGroup>
 </Project>

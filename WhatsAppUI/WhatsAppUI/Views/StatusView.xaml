@@ -45,6 +45,9 @@
                                     <ff:CachedImage.Transformations>
                                         <ffTransformations:RoundedTransformation Radius="240" />
                                     </ff:CachedImage.Transformations>
+                                    <ff:CachedImage.GestureRecognizers>
+                                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped" />
+                                    </ff:CachedImage.GestureRecognizers>
                                 </ff:CachedImage>
                             </StackLayout>
 

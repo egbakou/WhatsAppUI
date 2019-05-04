@@ -39,7 +39,7 @@ namespace WhatsApp.Services
                     PushDate = "2 minutes ago",                  
                     Contact = new Contact
                     {
-                        ContactID = 1,
+                        ContactID = 3,
                         Name = "Flora",
                         PhoneNumber = "+228999999",
                         ProfileImage = "Flora.jpg"
@@ -53,7 +53,7 @@ namespace WhatsApp.Services
                      PushDate = "10 minutes ago",
                      Contact = new Contact
                      {
-                        ContactID = 2,
+                        ContactID = 4,
                         Name = "Rita",
                         PhoneNumber = "+228999999",
                         ProfileImage = "Rita.jpg"                      
@@ -67,7 +67,7 @@ namespace WhatsApp.Services
                     PushDate = "15 minutes ago.",
                     Contact = new Contact
                     {
-                        ContactID = 3,
+                        ContactID = 5,
                         Name = "Sara",
                         PhoneNumber = "+228999999",
                         ProfileImage = "Sara.jpg"
@@ -81,7 +81,7 @@ namespace WhatsApp.Services
                     PushDate = "32 minutes ago",                   
                     Contact = new Contact
                     {
-                        ContactID = 4,
+                        ContactID = 6,
                         Name = "Riana",
                         PhoneNumber = "+228999999",
                         ProfileImage = "Riana.jpg"
@@ -95,7 +95,7 @@ namespace WhatsApp.Services
                     PushDate = "49 minutes ago",
                     Contact = new Contact
                     {
-                        ContactID = 5,
+                        ContactID = 7,
                         Name = "Grace",
                         PhoneNumber = "+228999999",
                         ProfileImage = "Grace.jpg"                       
@@ -109,7 +109,7 @@ namespace WhatsApp.Services
                     PushDate = "49 minutes ago",
                     Contact = new Contact
                     {
-                        ContactID = 6,
+                        ContactID = 8,
                         Name = "Alice",
                         PhoneNumber = "+228999999",
                         ProfileImage = "Alice.jpg"
