@@ -10,12 +10,13 @@
 - [x] Use of Emoji.
 - [x] FloatingActionButton for chats List interface.
 - [x] Profile image detail on Popup Page.
-- [x] Custom ViewCell for chats List.
-- [x] Scrollable chats List.
+- [x] Custom ViewCell for chats ListView.
 - [x] WhatsApp  Status List interface.
+- [x] Custom ViewCell for  Status ListView.
 - [x] Status detail.
 - [x] Take Photo when click on FloatingActionButton. 
 - [x] Calls List Interface.
+- [x] Custom ViewCell for  Calls ListView.
 - [x] FloatingActionButton for calls List interface.
 
 ## Platforms
