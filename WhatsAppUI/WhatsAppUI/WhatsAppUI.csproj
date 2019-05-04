@@ -21,10 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Converters\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <EmbeddedResource Update="Controls\FloatingActionButton.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
