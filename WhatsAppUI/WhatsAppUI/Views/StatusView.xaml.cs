@@ -19,19 +19,23 @@ namespace WhatsApp.Views
             BindingContext = viewModel = new StatusViewModel();
 		}
 
-        private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
+        private async void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             if (e.Item != null)
             {
                 var item = (Status)e.Item;
-                Navigation.PushModalAsync(new StatusDetailView(item));
+                await Navigation.PushModalAsync(new StatusDetailView(item));
             }
         }
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             var imageSender = (CachedImage)sender;
-            await Navigation.PushPopupAsync(new ChatProfileSelectionPopupView(imageSender.Source));
+            Status s = new Status
+            {
+                Image = imageSender.Source.ToString().Remove(0, 6)
+            };
+            await Navigation.PushModalAsync(new StatusDetailView(s));
 
         }
 
