@@ -4,7 +4,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using WhatsApp.Services.Navigation;
 using WhatsApp.ViewModels;
-using WhatsApp.Views;
+using WhatsApp.Views.Templates;
 using Xamarin.Forms;
 
 namespace CISPointOfSale.Services.Navigation

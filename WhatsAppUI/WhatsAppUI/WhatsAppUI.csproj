@@ -31,7 +31,10 @@
     <EmbeddedResource Update="PopupPages\ChatProfileSelectionPopupView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\CustomNavigationView.xaml">
+    <EmbeddedResource Update="Views\Camera.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Templates\CustomNavigationView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\MainView.xaml">

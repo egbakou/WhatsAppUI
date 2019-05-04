@@ -1,7 +1,7 @@
 ﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace WhatsApp.Views
+namespace WhatsApp.Views.Templates
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CustomNavigationView : NavigationPage
