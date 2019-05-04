@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="WhatsApp.Views.ChatsView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:WhatsApp.Controls"
+    xmlns:template="clr-namespace:WhatsAppUI.Views.Templates"
+    xmlns:viewModel="clr-namespace:WhatsApp.ViewModels"
+    Title="{Binding Title}">
+
+
+    <ContentPage.BindingContext>
+        <viewModel:ChatsViewModel />
+    </ContentPage.BindingContext>
+
+
+    <ContentPage.Content>
+        <RelativeLayout Margin="10,5,0,0">
+            <ContentView RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+                <ListView
+                    CachingStrategy="RecycleElement"
+                    HasUnevenRows="False"
+                    ItemTapped="ListView_ItemTapped"
+                    ItemsSource="{Binding Contacts}"
+                    RowHeight="75"
+                    SelectionMode="None"
+                    SeparatorColor="Gray"
+                    SeparatorVisibility="None">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <template:ChatsViewTemplate />
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ContentView>
+            <controls:FloatingActionButton
+                x:Name="FAB"
+                Margin="0,0,5,5"
+                ButtonColor="#2ECC71"
+                Clicked="Button_Clicked"
+                Image="bubble.png"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width,
+                                                                  Factor=1,
+                                                                  Constant=-90}"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Height,
+                                                                  Factor=1,
+                                                                  Constant=-90}" />
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="WhatsAppUI.Views.Templates.ChatsViewTemplate"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:ffTransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations">
+    <ContentView.Content>
+        <StackLayout Orientation="Horizontal">
+            <StackLayout
+                HorizontalOptions="Center"
+                Orientation="Vertical"
+                VerticalOptions="Center">
+                <ff:CachedImage
+                    HeightRequest="55"
+                    HorizontalOptions="StartAndExpand"
+                    Source="{Binding ProfileImage}"
+                    VerticalOptions="Center"
+                    WidthRequest="55">
+                    <ff:CachedImage.Transformations>
+                        <ffTransformations:RoundedTransformation Radius="240" />
+                    </ff:CachedImage.Transformations>
+                    <ff:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped" />
+                    </ff:CachedImage.GestureRecognizers>
+                </ff:CachedImage>
+            </StackLayout>
+            <StackLayout
+                Margin="10,0,0,0"
+                HorizontalOptions="FillAndExpand"
+                Orientation="Vertical"
+                VerticalOptions="Center">
+                <StackLayout
+                    Margin="0,0,10,0"
+                    HorizontalOptions="FillAndExpand"
+                    Orientation="Horizontal"
+                    VerticalOptions="Center">
+                    <Label
+                        FontSize="17"
+                        HorizontalOptions="Start"
+                        Text="{Binding Name}"
+                        TextColor="#000000"
+                        XAlign="Start" />
+                    <Label
+                        FontSize="12"
+                        HorizontalOptions="EndAndExpand"
+                        Text="{Binding ChatMetaData.LastChatDatetime}"
+                        TextColor="Gray"
+                        XAlign="End" />
+                </StackLayout>
+                <StackLayout
+                    Margin="0,0,10,10"
+                    HorizontalOptions="FillAndExpand"
+                    Orientation="Horizontal"
+                    VerticalOptions="Center">
+                    <Image
+                        HeightRequest="15"
+                        HorizontalOptions="Start"
+                        IsVisible="{Binding ChatMetaData.MessageIsFromMe}"
+                        Source="tick.png" />
+                    <Label
+                        FontSize="15"
+                        HorizontalOptions="Start"
+                        Text="{Binding ChatMetaData.MessageContent}"
+                        TextColor="Gray"
+                        XAlign="Start" />
+                    <Image
+                        HeightRequest="20"
+                        HorizontalOptions="EndAndExpand"
+                        IsVisible="{Binding ChatPinned}"
+                        Source="pins.png"
+                        WidthRequest="20" />
+                </StackLayout>
+                <StackLayout
+                    Margin="0,0,10,0"
+                    HorizontalOptions="FillAndExpand"
+                    Orientation="Horizontal"
+                    VerticalOptions="Center">
+                    <BoxView
+                        HeightRequest="0.3"
+                        HorizontalOptions="FillAndExpand"
+                        Color="LightGray" />
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>
