@@ -4,7 +4,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:controls="clr-namespace:WhatsApp.Controls"
-    xmlns:template="clr-namespace:WhatsAppUI.Views.Templates"
+    xmlns:template="clr-namespace:WhatsApp.Views.Templates"
     xmlns:viewModel="clr-namespace:WhatsApp.ViewModels"
     Title="{Binding Title}">
 

@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="WhatsApp.Views.StatusView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:WhatsApp.Controls"
+    xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:ffTransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+    xmlns:template="clr-namespace:WhatsApp.Views.Templates"
+    xmlns:viewModel="clr-namespace:WhatsApp.ViewModels"
+    Title="{Binding Title}">
+
+    <ContentPage.BindingContext>
+        <viewModel:StatusViewModel />
+    </ContentPage.BindingContext>
+
+
+    <ContentPage.Content>
+        <RelativeLayout>
+            <ContentView RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+                <StackLayout>
+
+                    <!--  MY STATUS  -->
+                    <Frame
+                        HasShadow="True"
+                        HeightRequest="40"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Fill">
+                        <StackLayout
+                            Margin="0,0,0,0"
+                            Padding="0,0,0,0"
+                            Orientation="Horizontal">
+                            <!--  last status image  -->
+                            <StackLayout
+                                HorizontalOptions="Center"
+                                Orientation="Vertical"
+                                VerticalOptions="Center">
+                                <ff:CachedImage
+                                    Margin="0,0,0,5"
+                                    HeightRequest="55"
+                                    HorizontalOptions="StartAndExpand"
+                                    Source="{Binding Me.Status.Image}"
+                                    VerticalOptions="Center"
+                                    WidthRequest="55">
+                                    <ff:CachedImage.Transformations>
+                                        <ffTransformations:RoundedTransformation Radius="240" />
+                                    </ff:CachedImage.Transformations>
+                                </ff:CachedImage>
+                            </StackLayout>
+
+                            <StackLayout
+                                Margin="5,0,0,0"
+                                HorizontalOptions="FillAndExpand"
+                                Orientation="Horizontal"
+                                VerticalOptions="Center">
+                                <StackLayout
+                                    Margin="0,0,10,0"
+                                    HorizontalOptions="Start"
+                                    Orientation="Vertical"
+                                    VerticalOptions="Center">
+                                    <!--  Contact  -->
+                                    <Label
+                                        FontSize="17"
+                                        HorizontalOptions="Start"
+                                        Text="My staus"
+                                        TextColor="#000000"
+                                        XAlign="Start" />
+                                    <!--  publish time ago  -->
+                                    <Label
+                                        FontSize="14"
+                                        HorizontalOptions="EndAndExpand"
+                                        Text="{Binding Me.Status.PushDate}"
+                                        TextColor="Gray" />
+                                </StackLayout>
+                                <StackLayout
+                                    HorizontalOptions="EndAndExpand"
+                                    Orientation="Horizontal"
+                                    VerticalOptions="Center">
+                                    <Image Source="more.png" WidthRequest="20" />
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+
+                    <!--  RECENT UPDATES  -->
+                    <StackLayout
+                        Margin="0,0,0,0"
+                        Padding="0,0,0,0"
+                        BackgroundColor="#EEEEF2"
+                        HeightRequest="20"
+                        HorizontalOptions="FillAndExpand"
+                        Orientation="Horizontal"
+                        VerticalOptions="Center">
+                        <Label
+                            Margin="10,0,0,0"
+                            FontSize="14"
+                            HorizontalOptions="Start"
+                            Text="Recent updates" />
+                    </StackLayout>
+                    <ListView
+                        CachingStrategy="RecycleElement"
+                        HasUnevenRows="False"
+                        ItemTapped="ListView_ItemTapped"
+                        ItemsSource="{Binding RecentUpdates}"
+                        RowHeight="75"
+                        SelectionMode="Single"
+                        SeparatorColor="Gray"
+                        SeparatorVisibility="None">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <template:StatusViewTemplate />
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </ContentView>
+            <controls:FloatingActionButton
+                x:Name="FAB"
+                Margin="0,0,5,5"
+                ButtonColor="#2ECC71"
+                Image="pick.png"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width,
+                                                                  Factor=1,
+                                                                  Constant=-90}"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Height,
+                                                                  Factor=1,
+                                                                  Constant=-90}" />
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

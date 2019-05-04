@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="WhatsApp.Views.Templates.StatusViewTemplate"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:ffTransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations">
+    <ContentView.Content>
+        <Frame
+            HasShadow="True"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Fill">
+            <StackLayout
+                Margin="0,0,0,0"
+                Padding="0,0,0,0"
+                Orientation="Horizontal">
+                <!--  last status image  -->
+                <StackLayout
+                    HorizontalOptions="Center"
+                    Orientation="Vertical"
+                    VerticalOptions="Center">
+                    <ff:CachedImage
+                        Margin="0,0,0,5"
+                        HeightRequest="55"
+                        HorizontalOptions="StartAndExpand"
+                        Source="{Binding Image}"
+                        VerticalOptions="Center"
+                        WidthRequest="55">
+                        <ff:CachedImage.Transformations>
+                            <ffTransformations:RoundedTransformation Radius="240" />
+                        </ff:CachedImage.Transformations>
+                    </ff:CachedImage>
+                </StackLayout>
+
+                <StackLayout
+                    Margin="5,0,0,0"
+                    HorizontalOptions="FillAndExpand"
+                    Orientation="Horizontal"
+                    VerticalOptions="Center">
+                    <StackLayout
+                        Margin="0,0,10,0"
+                        HorizontalOptions="FillAndExpand"
+                        Orientation="Vertical"
+                        VerticalOptions="Center">
+                        <!--  Contact  -->
+                        <Label
+                            FontSize="17"
+                            HorizontalOptions="Start"
+                            Text="{Binding Contact.Name}"
+                            TextColor="#000000"
+                            XAlign="Start" />
+                        <!--  publish time ago  -->
+                        <Label
+                            FontSize="14"
+                            HorizontalOptions="StartAndExpand"
+                            Text="{Binding PushDate}"
+                            TextColor="Gray" />
+                        <BoxView HorizontalOptions="FillAndExpand" Color="#e8edf4" />
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </ContentView.Content>
+</ContentView>

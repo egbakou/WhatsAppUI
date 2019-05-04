@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace WhatsAppUI.Views.Templates
+namespace WhatsApp.Views.Templates
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ChatsViewTemplate : ContentView
