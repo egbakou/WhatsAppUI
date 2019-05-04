@@ -244,9 +244,6 @@
     <BundleResource Include="Resources\more.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\nasa.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\Natalie.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -317,5 +314,8 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\hmo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Nasa.jpg" />
   </ItemGroup>
 </Project>

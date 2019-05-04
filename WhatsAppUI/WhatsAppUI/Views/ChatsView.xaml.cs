@@ -17,7 +17,7 @@ namespace WhatsApp.Views
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            await DisplayAlert("FAB Clicked!", "Congrats on creating your FAB!", "Thanks!");
+            await DisplayAlert("Chat Button", "Select contact and ...", "OK");
         }
 
         private async void ListView_ItemTapped(object sender, ItemTappedEventArgs e)

@@ -17,7 +17,7 @@ namespace WhatsApp.Views
 
         private void Button_Clicked(object sender, System.EventArgs e)
         {
-            DisplayAlert("FAB", "You want to call someone ?", "Yes");
+            DisplayAlert("Call Button", "Select contact and ...", "OK");
         }       
     }
 }

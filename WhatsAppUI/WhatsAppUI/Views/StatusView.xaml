@@ -124,6 +124,7 @@
                 x:Name="FAB"
                 Margin="0,0,5,5"
                 ButtonColor="#2ECC71"
+                Command="{Binding TakePhotoCommand}"
                 Image="pick.png"
                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                   Property=Width,

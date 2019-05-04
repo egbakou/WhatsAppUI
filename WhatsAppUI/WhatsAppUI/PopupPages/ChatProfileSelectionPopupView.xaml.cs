@@ -13,5 +13,6 @@ namespace WhatsApp.PopupPages
 			InitializeComponent ();
             BindingContext = viewModel = new ChatProfileSelectionPopupViewModel(imageSource);
 		}
-	}
+ 
+    }
 }

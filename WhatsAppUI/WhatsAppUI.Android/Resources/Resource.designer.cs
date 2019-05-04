@@ -3118,7 +3118,7 @@ namespace WhatsAppUI.Droid
 			public const int mr_vol_type_audiotrack_light = 2130837815;
 			
 			// aapt resource value: 0x7f020138
-			public const int nasa = 2130837816;
+			public const int Nasa = 2130837816;
 			
 			// aapt resource value: 0x7f020139
 			public const int Natalie = 2130837817;

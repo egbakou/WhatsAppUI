@@ -168,7 +168,7 @@ namespace WhatsApp.Services
                     ContactID = 2,
                     Name = "Nasa team",
                     PhoneNumber = "+228999999",
-                    ProfileImage = "nasa.jpg",
+                    ProfileImage = "Nasa.jpg",
                     ChatPinned = false,
                     ChatMetaData = new LastChatMetaData{
                         LastChatMetaDataID = 1,
