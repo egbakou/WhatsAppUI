@@ -65,7 +65,7 @@
                                     <Label
                                         FontSize="17"
                                         HorizontalOptions="Start"
-                                        Text="My staus"
+                                        Text="My status"
                                         TextColor="#000000"
                                         XAlign="Start" />
                                     <!--  publish time ago  -->

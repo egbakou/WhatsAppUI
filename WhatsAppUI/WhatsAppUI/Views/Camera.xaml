@@ -22,7 +22,7 @@
             <Button
                 Clicked="Button_Clicked"
                 HorizontalOptions="Center"
-                Text="Caméra"
+                Text="Camera"
                 VerticalOptions="End" />
         </StackLayout>
     </ContentPage.Content>
